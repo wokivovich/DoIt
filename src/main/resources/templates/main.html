@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>MainPage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div th:text = "'Hello, ' + ${username} + '!'"></div>
-    <div>This your tasks on today</div>
-  <tr th:each="task: ${tasks}">
+
+  <div th:text = "'Hello, ' + ${username} + '!'" class="header"></div>
+<div class="navbar">
+    <button type="submit">Сегодня</button></br>
+    <button type="submit">Завтра</button></br>
+    <button type="submit">Проекты</button></br>
+</div>
+<div class="task-list">
+    <p>This your tasks on today</p>
+  <tr th:each="task: ${tasks}" >
       <form th:action="@{delete}" method="post">
           <input type="hidden" name="id" th:value="${task.id}" />
-          <input type="submit" value="complete" class="btn btn-danger" />
+          <button type="submit" class="done-btn">done</button>
           <td th:text="${task.description}" />
-      </form>
-
-
-      </br>
-
+      </form></br>
 
   </tr>
+</div>
+  <div class="add-task-form">
   <form th:action="@{new-task}" method="post">
       <input type="text" name="description">
       <button type="submit">Add</button>
   </form>
+  </div>
   <form action="/logout" method="post">
       <input type="submit" value="Sign Out"/>
   </form>
+
 </body>
 </html>

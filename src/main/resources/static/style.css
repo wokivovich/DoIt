@@ -1,0 +1,32 @@
+.header {
+    font-size: 20px;
+    color: #FFAA00;
+    background-color: #1240AB;
+}
+
+.navbar {
+
+}
+
+.task-list {
+    background-color: #FFAA00;
+}
+
+.done-btn {
+    color: #FFAA00;
+    background-color: #3914AF;
+}
+
+.done-btn:hover {
+    background-color: #1240AB;
+}
+
+.add-task-form {
+    background-color: #1240AB;
+}
+
+.add-task-form button {
+    background-color: #FFAA00;
+}
+
+
