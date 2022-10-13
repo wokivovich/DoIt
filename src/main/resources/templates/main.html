@@ -5,9 +5,14 @@
     <title>MainPage</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="main-page">
 
-  <div th:text = "'Hello, ' + ${username} + '!'" class="header"></div>
+<div class="header">
+      <h1 th:text = "'Hello, ' + ${username}" ></h1>
+      <form class="logout" action="/logout" method="post">
+          <input type="submit" value="Sign Out"/>
+      </form>
+</div>
 <div class="navbar">
     <button type="submit">Сегодня</button></br>
     <button type="submit">Завтра</button></br>
@@ -30,9 +35,7 @@
       <button type="submit">Add</button>
   </form>
   </div>
-  <form action="/logout" method="post">
-      <input type="submit" value="Sign Out"/>
-  </form>
+
 
 </body>
 </html>

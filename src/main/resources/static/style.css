@@ -1,32 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+.login-page {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.sign-in {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login-btn {
+    margin-top: 10px;
+    background-color: #464D85;
+}
+
+
+
+.login-form{
+    margin-top: 100px;
+    width: 400px;
+    text-align: center;
+    display: inline-block;
+    background-color: #ADB4E4	;
+    color: #464D85;
+    border-radius: 10px;
+}
+
+.login-form input {
+    width: 200px;
+}
+
+
+
+.main-page {
+    background-color: #C8CBE4;
+}
+
 .header {
-    font-size: 20px;
-    color: #FFAA00;
-    background-color: #1240AB;
+    font-size: 10px;
+    background-color: #ADB4E4;
+    color: #464D85;
+}
+
+.header .logout {
+    padding-right: 100px;
 }
 
 .navbar {
 
+    padding-top: 10px;
+    float: left;
+    height: 250px;
+    width: 30%;
+}
+
+.navbar button {
+    width: 200px;
+    background-color: #F5DDB1;
+    border-color: #F5DDB1;
+    font-size: 20px;
+    color: #C7AB75;
+}
+
+.navbar button:hover {
+    background-color: #C19E5C;
+    color: #F5E9D2;
 }
 
 .task-list {
-    background-color: #FFAA00;
+    float: left;
+    padding-left: 40px;
+    width: 50%;
+    height: 200px;
 }
 
 .done-btn {
-    color: #FFAA00;
-    background-color: #3914AF;
+    color: #F5DDB1;
+    background-color: #464D85;
 }
 
 .done-btn:hover {
-    background-color: #1240AB;
+    color: #464D85;
+    background-color: #F5DDB1;
 }
 
 .add-task-form {
-    background-color: #1240AB;
+    padding-top: 10px;
+    height: 250px;
 }
 
-.add-task-form button {
-    background-color: #FFAA00;
-}
 
 
