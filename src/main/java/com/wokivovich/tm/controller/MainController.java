@@ -31,7 +31,7 @@ public class MainController {
         User user = userService.findByUsername(authentication.getName());
 
         model.addAttribute("username", authentication.getName());
-        model.addAttribute("tasks", userService.findCompletedUsersTasks(user.getId()));
+        model.addAttribute("tasks", taskService.getTasks(user.getId()));
 
         return "main.html";
     }

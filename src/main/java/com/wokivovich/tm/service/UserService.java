@@ -20,7 +20,7 @@ public class UserService {
     }
 
     public List<Task> findCompletedUsersTasks(Long id) {
-
+        
         List<Task> tasks = userRepo.findUncompletedUserTasks(id);
         return tasks;
     }

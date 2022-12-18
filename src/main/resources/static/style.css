@@ -43,6 +43,10 @@
     padding-left: 20px;
 }
 
+.completed-task button{
+    text-decoration: line-through;
+}
+
 .task button {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
