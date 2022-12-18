@@ -6,36 +6,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="main-page">
+    <div class="left-side">
+        <div class="header">
+            <h1 th:text = "'Hello, ' + ${username}" ></h1>
 
-<div class="header">
-      <h1 th:text = "'Hello, ' + ${username}" ></h1>
-      <form class="logout" action="/logout" method="post">
-          <input type="submit" value="Sign Out"/>
-      </form>
-</div>
-<div class="navbar">
-    <button type="submit">Сегодня</button></br>
-    <button type="submit">Завтра</button></br>
-    <button type="submit">Проекты</button></br>
-</div>
-<div class="task-list">
-    <p>This your tasks on today</p>
-  <tr th:each="task: ${tasks}" >
-      <form th:action="@{delete}" method="post">
-          <input type="hidden" name="id" th:value="${task.id}" />
-          <button type="submit" class="done-btn">done</button>
-          <td th:text="${task.description}" />
-      </form></br>
+        </div>
+        <div class="navbar">
+            <button type="submit">Сегодня</button></br>
+            <button type="submit">Завтра</button></br>
+            <button type="submit">Проекты</button></br>
+        </div>
 
-  </tr>
-</div>
-  <div class="add-task-form">
-  <form th:action="@{new-task}" method="post">
-      <input type="text" name="description">
-      <button type="submit">Add</button>
-  </form>
-  </div>
+        <form class="logout" action="/logout" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
 
+    <div class="right-side">
+        <div class="task-list">
+            <p>This your tasks on today</p>
+            <tr th:each="task: ${tasks}" >
+                <form class="task" th:action="@{delete}" method="post">
+                    <input type="hidden" name="id" th:value="${task.id}" />
+                    <button type="submit" class="done-btn"><td th:text="${task.description}" /></button>
+
+                </form>
+                </br>
+
+            </tr>
+        </div>
+        <div class="add-task-form">
+            <form th:action="@{new-task}" method="post">
+                <input type="text" name="description">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

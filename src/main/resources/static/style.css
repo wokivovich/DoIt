@@ -1,7 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+.left-side {
+    background-color: deeppink;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+
+}
+
+.left-side input {
+    background: none;
+    border: none;
+    padding-top: 20px;
+}
+
+.left-side button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.left-side button:hover {
+    background-color: white;
+}
+
+.right-side {
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 80%;
+    padding-left: 20px;
+}
+
+.task button {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: none;
+    border: none;
+}
+.task button:hover {
+    background-color: white;
+    color: black;
+}
 
 .login-page {
+    background-color: black;
     width: 100%;
     text-align: center;
     display: inline-block;
@@ -17,74 +72,19 @@
     background-color: #464D85;
 }
 
-
-
 .login-form{
     margin-top: 100px;
     width: 400px;
     text-align: center;
     display: inline-block;
-    background-color: #ADB4E4	;
-    color: #464D85;
+    background-color: deeppink;
+    color: black;
     border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .login-form input {
     width: 200px;
-}
-
-
-
-.main-page {
-    background-color: #C8CBE4;
-}
-
-.header {
-    font-size: 10px;
-    background-color: #ADB4E4;
-    color: #464D85;
-}
-
-.header .logout {
-    padding-right: 100px;
-}
-
-.navbar {
-
-    padding-top: 10px;
-    float: left;
-    height: 250px;
-    width: 30%;
-}
-
-.navbar button {
-    width: 200px;
-    background-color: #F5DDB1;
-    border-color: #F5DDB1;
-    font-size: 20px;
-    color: #C7AB75;
-}
-
-.navbar button:hover {
-    background-color: #C19E5C;
-    color: #F5E9D2;
-}
-
-.task-list {
-    float: left;
-    padding-left: 40px;
-    width: 50%;
-    height: 200px;
-}
-
-.done-btn {
-    color: #F5DDB1;
-    background-color: #464D85;
-}
-
-.done-btn:hover {
-    color: #464D85;
-    background-color: #F5DDB1;
 }
 
 .add-task-form {
