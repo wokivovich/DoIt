@@ -41,6 +41,16 @@
     background-color: white;
 }
 
+.left-side .logout input{
+    font-size: 15px;
+    width: 20%;
+    padding-left: 0px;
+}
+
+.left-side .logout input:hover {
+    background-color: white;
+}
+
 .right-side {
     background-color: black;
     font-size: 30px;
