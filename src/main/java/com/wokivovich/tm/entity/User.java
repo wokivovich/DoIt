@@ -1,15 +1,13 @@
 package com.wokivovich.tm.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Data
+@Setter
+@Getter
 @Table(name = "usr")
 @AllArgsConstructor
 @NoArgsConstructor

@@ -35,7 +35,7 @@ public class TaskService {
         taskRepo.save(Task.builder()
                 .description(task.getDescription())
                 .isCompleted(false)
-                .completionDate(LocalDate.now())
+                .completionDate(task.getCompletionDate())
                 .user(user)
                 .build());
     }
