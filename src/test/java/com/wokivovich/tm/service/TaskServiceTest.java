@@ -93,4 +93,29 @@ public class TaskServiceTest {
 
         verify(taskRepo).findByUserId(1L);
     }
+
+    @Test
+    void getTomorrowTasks_twoTasks_returnsOneTask() {
+        Task task1 = Task.builder()
+                .id(1L)
+                .description("tomorrow task")
+                .isCompleted(false)
+                .completionDate(LocalDate.now().plusDays(1))
+                .build();
+        Task task2 = Task.builder()
+                .id(2L)
+                .description("yesterday task")
+                .isCompleted(false)
+                .completionDate(LocalDate.now().minusDays(1))
+                .build();
+
+        when(taskRepo.findByUserId(1L)).thenReturn(List.of(task1, task2));
+
+        List<Task> actual = taskService.getTomorrowTasks(1L);
+
+        assertThat(actual.size()).isEqualTo(1);
+        assertThat(actual).isEqualTo(List.of(task1));
+
+        verify(taskRepo).findByUserId(1L);
+    }
 }

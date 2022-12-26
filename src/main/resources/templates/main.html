@@ -49,6 +49,7 @@
         <div class="add-task-form">
             <form th:action="@{new-task}" method="post">
                 <input type="text" name="description">
+                <input type="date" name="completionDate" />
                 <button type="submit">Add</button>
             </form>
         </div>

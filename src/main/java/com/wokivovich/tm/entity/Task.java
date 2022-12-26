@@ -1,15 +1,14 @@
 package com.wokivovich.tm.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Data
+@Setter
+@Getter
 @Table(name = "task")
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,6 +21,8 @@ public class Task {
 
     private String description;
     private boolean isCompleted;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate completionDate;
 
     @JoinColumn(name = "usr")
