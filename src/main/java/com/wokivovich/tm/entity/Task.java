@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -21,6 +22,7 @@ public class Task {
 
     private String description;
     private boolean isCompleted;
+    private LocalDate completionDate;
 
     @JoinColumn(name = "usr")
     @ManyToOne

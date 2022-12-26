@@ -26,7 +26,18 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.left-side a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .left-side button:hover {
+    background-color: white;
+}
+
+.left-side a:hover {
     background-color: white;
 }
 

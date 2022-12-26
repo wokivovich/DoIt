@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomorrow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="main-page">
+<div class="left-side">
+  <div class="header">
+    <h1 th:text = "'Hello, ' + ${username}" ></h1>
+
+  </div>
+  <div class="navbar">
+    <a href="/today">Today</a></br>
+    <a href="/tomorrow">Tomorrow</a></br>
+  </div>
+
+  <form class="logout" action="/logout" method="post">
+    <input type="submit" value="Sign Out"/>
+  </form>
+</div>
+
+<div class="right-side">
+  <div class="task-list">
+    <p>This your tasks on today</p>
+    <tr th:each="task: ${tasks}" >
+      <div th:switch="${task.isCompleted}">
+        <div th:case="false">
+          <form class="task" th:action="@{delete}" method="post">
+            <input type="hidden" name="id" th:value="${task.id}" />
+            <button type="submit" class="done-btn"><td th:text="${task.description}" /></button>
+
+          </form>
+        </div>
+        <div class="completed-task" th:case="true">
+          <form class="task"  th:action="@{delete}" method="post">
+            <input type="hidden" name="id" th:value="${task.id}" />
+            <button type="submit" class="done-btn"><td th:text="${task.description}" /></button>
+
+          </form>
+        </div>
+
+
+        </br>
+      </div>
+    </tr>
+  </div>
+  <div class="add-task-form">
+    <form th:action="@{new-task}" method="post">
+      <input type="text" name="description">
+      <button type="submit">Add</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
