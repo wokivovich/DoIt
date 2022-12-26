@@ -19,12 +19,6 @@ public class UserService {
         this.userRepo = userRepo;
     }
 
-    public List<Task> findCompletedUsersTasks(Long id) {
-        
-        List<Task> tasks = userRepo.findUncompletedUserTasks(id);
-        return tasks;
-    }
-
     public User findByUsername(String username) {
         return userRepo.findByUsername(username).orElseThrow(() ->
                 new EntityNotFoundException("Can't find this user"));
