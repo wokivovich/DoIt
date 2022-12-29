@@ -12,7 +12,6 @@ public interface UserRepo extends JpaRepository<User, Long> {
 
     Optional<User> findByUsername(String username);
 
-
     @Query("select task from Task task inner join User on task.user.id = ?1 where task.isCompleted = false")
     List<Task> findUncompletedUserTasks(Long id);
 }

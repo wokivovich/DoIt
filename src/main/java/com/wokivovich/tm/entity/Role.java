@@ -1,16 +1,16 @@
 package com.wokivovich.tm.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "role")
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Role {
 
     @Id

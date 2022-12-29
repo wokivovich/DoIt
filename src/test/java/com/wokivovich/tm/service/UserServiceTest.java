@@ -8,6 +8,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
@@ -18,8 +19,11 @@ public class UserServiceTest {
     @Mock
     private UserRepo userRepo;
 
+    @Mock
+    private BCryptPasswordEncoder passwordEncoder;
+
     @InjectMocks
-    private UserService userService = new UserService(userRepo);
+    private UserService userService = new UserService(userRepo, passwordEncoder);
 
     @Test
     void findByUsername_notExistedUsername_NotFoundException() {
