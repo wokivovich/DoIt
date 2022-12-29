@@ -18,7 +18,7 @@ public class UserServiceTest {
 
     @Mock
     private UserRepo userRepo;
-
+    
     @Mock
     private BCryptPasswordEncoder passwordEncoder;
 

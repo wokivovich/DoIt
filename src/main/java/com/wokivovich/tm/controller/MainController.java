@@ -33,7 +33,6 @@ public class MainController {
 
         model.addAttribute("username", authentication.getName());
         model.addAttribute("tasks", taskService.getTodayTasks(user.getId()));
-
         presentURI = request.getRequestURI();
 
         return "main.html";
@@ -46,7 +45,6 @@ public class MainController {
 
         model.addAttribute("username", authentication.getName());
         model.addAttribute("tasks", taskService.getTomorrowTasks(user.getId()));
-
         presentURI = request.getRequestURI();
 
         return "main.html";
